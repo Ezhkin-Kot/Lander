@@ -4,5 +4,5 @@
 }
 
 body {
-    font-family: 'JetBrainsMono';
+    font-family: 'JetBrainsMono' !important;
 }
