@@ -6,3 +6,25 @@
 body {
     font-family: 'JetBrainsMono' !important;
 }
+
+#header {
+    background-image: url('images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#white-font {
+    color: white !important;
+}
+
+#white-font2 {
+    color: gainsboro !important;
+}
+
+#a-font {
+    color: deepskyblue !important;
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
