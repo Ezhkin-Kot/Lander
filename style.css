@@ -30,3 +30,19 @@ body {
 .blink {
     animation: blink 1s infinite;
 }
+
+h4 {
+    padding-top: 3% !important;
+}
+
+#advantages {
+    background: linear-gradient();
+    text-align: justify;
+    font-size: x-large;
+    color: gainsboro !important;
+}
+
+#text-center {
+    text-align: center;
+    padding: 10%;
+}
