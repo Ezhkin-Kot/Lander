@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: "JetBrainsMono";
     src: url('fonts/ttf/JetBrainsMono-Regular.ttf');
@@ -5,12 +9,57 @@
 
 body {
     font-family: 'JetBrainsMono' !important;
+    background-color: #010101 !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.btn {
+    color: deepskyblue !important;
+    background-color: #1e1f22 !important;
+    transition-property: scale !important;
+    transition-duration: 0.25s !important;
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    scale: 110%;
+}
+
+.btn:active {
+    scale: 90%;
 }
 
 #header {
-    background-image: url('images/background.png');
+    margin: 0px !important;
+    background-image: url('images/Back.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 10%;
+}
+
+#navbar {
+    position: sticky;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    color: white;
+    background-color: #1e1f22;
+}
+
+#navbar > .navbar-brand {
+    margin-left: 1.5rem;
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    font-weight: bold;
 }
 
 #white-font {
@@ -27,4 +76,20 @@ body {
 
 .blink {
     animation: blink 1s infinite;
+}
+
+h4 {
+    padding-top: 3% !important;
+}
+
+#advantages {
+    background: linear-gradient();
+    text-align: justify;
+    font-size: x-large;
+    color: gainsboro !important;
+}
+
+#text-center {
+    text-align: center;
+    padding: 10%;
 }
