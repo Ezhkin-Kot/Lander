@@ -5,12 +5,14 @@
 
 body {
     font-family: 'JetBrainsMono' !important;
+    background-color: #010101 !important;
 }
 
 #header {
-    background-image: url('images/background.png');
+    background-image: url('images/back.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 10%;
 }
 
 #white-font {
