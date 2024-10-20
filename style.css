@@ -11,10 +11,25 @@ body {
 
 #header {
     margin: 0 !important;
-    background-image: url('images/back.jpg');
+    background-image:
+        linear-gradient(to bottom, transparent 20%, #010101),
+        url('images/back_2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     padding: 10%;
+}
+
+nav {
+    display: block;
+    position: fixed !important;
+    background-color: #1e1f22;
+    width: 50vw;
+
+
+    a {
+        color: whitesmoke !important;
+        text-decoration: none;
+    }
 }
 
 #white-font2 {
@@ -22,8 +37,23 @@ body {
 }
 
 #a-font {
+    background-color: rgba(0, 29, 29, 0.75);
+    padding: 1%;
     color: deepskyblue !important;
     text-decoration: none !important;
+    transition: 0.5s;
+}
+
+#a-font:hover {
+    scale: 90%;
+    transition: 0.1s;
+    background-color: rgba(0, 29, 29, 0.875);
+}
+
+#a-font:active {
+    scale: 80%;
+    transition: 0.1s;
+    background-color: rgba(0, 29, 29, 1);
 }
 
 .blink {
@@ -58,7 +88,7 @@ h4 {
 #advantages {
     background: linear-gradient();
     text-align: justify;
-    font-size: x-large;
+    font-size: large;
     transition: 0.5s;
 }
 
@@ -78,7 +108,7 @@ h4 {
     margin: 0 auto;
     text-align: center !important;
     overflow: hidden;
-    animation: typing 3.5s;
+    animation: typing 5s;
 }
 
 @keyframes typing {
