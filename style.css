@@ -23,10 +23,12 @@ nav {
     display: block;
     position: fixed !important;
     background-color: #1e1f22;
+    width: 50vw;
 
 
     a {
         color: whitesmoke !important;
+        text-decoration: none;
     }
 }
 
