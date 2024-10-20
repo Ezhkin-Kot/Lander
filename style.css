@@ -11,10 +11,23 @@ body {
 
 #header {
     margin: 0 !important;
-    background-image: url('images/back_2.jpg');
+    background-image:
+        linear-gradient(to bottom, transparent 20%, #010101),
+        url('images/back_2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     padding: 10%;
+}
+
+nav {
+    display: block;
+    position: fixed !important;
+    background-color: #1e1f22;
+
+
+    a {
+        color: whitesmoke !important;
+    }
 }
 
 #white-font2 {
@@ -93,7 +106,7 @@ h4 {
     margin: 0 auto;
     text-align: center !important;
     overflow: hidden;
-    animation: typing 3.5s;
+    animation: typing 5s;
 }
 
 @keyframes typing {
