@@ -7,6 +7,10 @@ html {
     src: url('fonts/ttf/JetBrainsMono-Regular.ttf');
 }
 
+::-webkit-scrollbar {
+    width: 0;
+  }
+
 body {
     font-family: 'JetBrainsMono' !important;
     background-color: #010101 !important;
