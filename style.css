@@ -3,7 +3,7 @@ html {
 }
 
 @font-face {
-    font-family: "JetBrainsMono";
+    font-family: 'JetBrainsMono';
     src: url('fonts/ttf/JetBrainsMono-Regular.ttf');
 }
 
@@ -17,12 +17,13 @@ body {
     background-color: #1e1f22 !important;
     transition-property: scale !important;
     transition-duration: 0.25s !important;
-    opacity: 0.7;
     display: flex;
     align-items: center;
     width: max-content;
     padding: 0.5rem;
     cursor: pointer;
+    opacity: 0;
+    animation: showanim 2s forwards;
 }
 
 .btn:hover {
@@ -31,14 +32,13 @@ body {
 
 .btn:active {
     scale: 90%;
-    color: white !important;
 }
 
 #header {
     margin: 0 !important;
     background-image: 
       linear-gradient(to bottom, transparent 20%, #010101),
-      url('images/Back-2.jpg');
+      url('images/Back_2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     padding: 10%;
@@ -49,10 +49,13 @@ body {
     top: 0 !important;
     z-index: 10 !important;
     width: 100%;
-    height: 60px;
+    height: 3.5rem;
     display: flex;
     color: white;
     background-color: #1e1f22;
+    opacity: 0.8;
+    transition-property: opacity !important;
+    transition-duration: 0.25s !important;
 }
 
 #navbar > .navbar-brand {
@@ -63,11 +66,21 @@ body {
     font-weight: bold;
 }
 
+#navbar:hover {
+    opacity: 1;
+}
+
+#navbar > .navbar-nav {
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 4rem;
+}
+
 nav {
     display: block;
     position: fixed !important;
     background-color: #1e1f22;
-    width: 50vw;
+
 }
 
 a {
@@ -89,7 +102,7 @@ a {
     display: inline-block !important;
     color: orange;
     animation: blink 1s infinite;
-    text-decoration: bold;
+    font-weight: bold;
 }
 
 @keyframes blink {
@@ -115,7 +128,8 @@ h4 {
 }
 
 #advantages {
-    background: linear-gradient();
+    background: linear-gradient(#010101, #011010);
+    margin-top: 10rem;
     text-align: justify;
     font-size: x-large;
     color: gainsboro !important;
@@ -128,11 +142,11 @@ h4 {
     transition: 0.5s;
 }
 
-#padding {
+.padding {
     padding: 1%;
 }
 
-#typewriter {
+.typewriter {
     color: white !important;
     white-space: nowrap;
     margin: 0 auto;
@@ -149,4 +163,9 @@ h4 {
     to {
         width: 100%;
     }
+}
+
+@keyframes  showanim{
+    0% {opacity: 0;}
+    100% {opacity: 0.8;}
 }
