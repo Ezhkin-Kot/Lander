@@ -9,7 +9,7 @@ html {
 
 ::-webkit-scrollbar {
     width: 0;
-  }
+}
 
 body {
     font-family: 'JetBrainsMono' !important;
@@ -40,9 +40,9 @@ body {
 
 #header {
     margin: 0 !important;
-    background-image: 
-      linear-gradient(to bottom, transparent 20%, #010101),
-      url('images/Back_2.jpg');
+    background-image:
+        linear-gradient(to bottom, transparent 20%, #010101),
+        url('images/Back_2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     padding: 10%;
@@ -62,7 +62,7 @@ body {
     transition-duration: 0.25s !important;
 }
 
-#navbar > .navbar-brand {
+#navbar>.navbar-brand {
     margin-left: 1.5rem;
     display: flex;
     align-items: center;
@@ -74,7 +74,7 @@ body {
     opacity: 1;
 }
 
-#navbar > .navbar-nav {
+#navbar>.navbar-nav {
     justify-content: space-evenly;
     align-items: center;
     margin-left: 4rem;
@@ -88,8 +88,8 @@ nav {
 }
 
 a {
-        color: whitesmoke !important;
-        text-decoration: none !important;
+    color: whitesmoke !important;
+    text-decoration: none !important;
 }
 
 #white-font2 {
@@ -169,7 +169,22 @@ h4 {
     }
 }
 
-@keyframes  showanim{
-    0% {opacity: 0;}
-    100% {opacity: 0.8;}
+@keyframes showanim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.8;
+    }
+}
+
+section {
+    opacity: 0.1 !important;
+    transition: 0.2s;
+}
+
+.active {
+    opacity: 1 !important;
+    transition: 0.2s;
 }
