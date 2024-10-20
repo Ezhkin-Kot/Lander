@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: "JetBrainsMono";
     src: url('fonts/ttf/JetBrainsMono-Regular.ttf');
@@ -6,17 +10,57 @@
 body {
     font-family: 'JetBrainsMono' !important;
     background-color: #010101 !important;
+}
+
+.btn {
+    color: deepskyblue !important;
+    background-color: #1e1f22 !important;
+    transition-property: scale !important;
+    transition-duration: 0.25s !important;
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    scale: 110%;
+}
+
+.btn:active {
+    scale: 90%;
     color: white !important;
 }
 
 #header {
     margin: 0 !important;
-    background-image:
-        linear-gradient(to bottom, transparent 20%, #010101),
-        url('images/back_2.jpg');
+    background-image: 
+      linear-gradient(to bottom, transparent 20%, #010101),
+      url('images/Back-2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     padding: 10%;
+}
+
+#navbar {
+    position: fixed !important;
+    top: 0 !important;
+    z-index: 10 !important;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    color: white;
+    background-color: #1e1f22;
+}
+
+#navbar > .navbar-brand {
+    margin-left: 1.5rem;
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    font-weight: bold;
 }
 
 nav {
@@ -24,12 +68,11 @@ nav {
     position: fixed !important;
     background-color: #1e1f22;
     width: 50vw;
+}
 
-
-    a {
+a {
         color: whitesmoke !important;
-        text-decoration: none;
-    }
+        text-decoration: none !important;
 }
 
 #white-font2 {
@@ -37,23 +80,9 @@ nav {
 }
 
 #a-font {
-    background-color: rgba(0, 29, 29, 0.75);
-    padding: 1%;
     color: deepskyblue !important;
     text-decoration: none !important;
     transition: 0.5s;
-}
-
-#a-font:hover {
-    scale: 90%;
-    transition: 0.1s;
-    background-color: rgba(0, 29, 29, 0.875);
-}
-
-#a-font:active {
-    scale: 80%;
-    transition: 0.1s;
-    background-color: rgba(0, 29, 29, 1);
 }
 
 .blink {
@@ -88,14 +117,15 @@ h4 {
 #advantages {
     background: linear-gradient();
     text-align: justify;
-    font-size: large;
-    transition: 0.5s;
+    font-size: x-large;
+    color: gainsboro !important;
 }
-
 
 #text-center {
     text-align: center;
     padding: 10%;
+    font-size: large;
+    transition: 0.5s;
 }
 
 #padding {
