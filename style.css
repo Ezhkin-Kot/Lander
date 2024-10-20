@@ -180,11 +180,11 @@ h4 {
 }
 
 section {
-    opacity: 0.1 !important;
+    opacity: 0.2;
     transition: 0.2s;
 }
 
-.active {
+section.active {
     opacity: 1 !important;
     transition: 0.2s;
 }
