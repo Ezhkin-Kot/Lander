@@ -12,10 +12,6 @@ body {
     background-color: #010101 !important;
 }
 
-a {
-    text-decoration: none !important;
-}
-
 .btn {
     color: deepskyblue !important;
     background-color: #1e1f22 !important;
@@ -35,11 +31,14 @@ a {
 
 .btn:active {
     scale: 90%;
+    color: white !important;
 }
 
 #header {
     margin: 0 !important;
-    background-image: url('images/Back.jpg');
+    background-image: 
+      linear-gradient(to bottom, transparent 20%, #010101),
+      url('images/Back-2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     padding: 10%;
@@ -64,8 +63,16 @@ a {
     font-weight: bold;
 }
 
-#white-font {
-    color: white !important;
+nav {
+    display: block;
+    position: fixed !important;
+    background-color: #1e1f22;
+    width: 50vw;
+}
+
+a {
+        color: whitesmoke !important;
+        text-decoration: none !important;
 }
 
 #white-font2 {
@@ -74,10 +81,33 @@ a {
 
 #a-font {
     color: deepskyblue !important;
+    text-decoration: none !important;
+    transition: 0.5s;
 }
 
 .blink {
+    display: inline-block !important;
+    color: orange;
     animation: blink 1s infinite;
+    text-decoration: bold;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 h4 {
@@ -94,4 +124,29 @@ h4 {
 #text-center {
     text-align: center;
     padding: 10%;
+    font-size: large;
+    transition: 0.5s;
+}
+
+#padding {
+    padding: 1%;
+}
+
+#typewriter {
+    color: white !important;
+    white-space: nowrap;
+    margin: 0 auto;
+    text-align: center !important;
+    overflow: hidden;
+    animation: typing 5s;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
 }
