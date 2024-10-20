@@ -114,6 +114,28 @@
     <footer id="footer">
 
     </footer>
+    <script>
+        // Функция для отслеживания пересечения блоков с областью видимости
+        const sections = document.querySelectorAll('section');
+
+        const observerOptions = {
+            threshold: 0.4 // Процент пересечения элемента с экраном (50%)
+        };
+
+        const observerCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                } else {
+                    entry.target.classList.remove('active');
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+        sections.forEach(section => observer.observe(section));
+    </script>
 </body>
 
 </html>
