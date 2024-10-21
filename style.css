@@ -14,6 +14,7 @@ html {
 body {
     font-family: 'JetBrainsMono' !important;
     background-color: #010101 !important;
+    background: linear-gradient(#010101, #021214);
 }
 
 .btn {
@@ -27,7 +28,7 @@ body {
     padding: 0.5rem;
     cursor: pointer;
     opacity: 0;
-    animation: showanim 2s forwards;
+    animation: smooth-appearance 3s forwards;
 }
 
 .btn:hover {
@@ -36,6 +37,16 @@ body {
 
 .btn:active {
     scale: 90%;
+}
+
+@keyframes smooth-appearance {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.8;
+    }
 }
 
 #header {
@@ -132,7 +143,6 @@ h4 {
 }
 
 #advantages {
-    background: linear-gradient(#010101, #011010);
     margin-top: 10rem;
     text-align: justify;
     font-size: x-large;
@@ -169,16 +179,6 @@ h4 {
     }
 }
 
-@keyframes showanim {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 0.8;
-    }
-}
-
 section {
     opacity: 0.2;
     transition: 0.2s;
@@ -188,6 +188,76 @@ section.active {
     opacity: 1 !important;
     transition: 0.2s;
 }
+
+/* teachers */
+.teachers-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 44rem;
+    overflow: hidden;
+}
+
+.teachers-slider>.card {
+    position: absolute;
+    width: 25rem;
+    height: 34rem;
+    background-color: #1e1f22;
+    color: white;
+    font-size: x-large;
+    border-radius: 15px;
+    padding: 20px;
+    transition-property: transform, opacity;
+    transition-duration: 1s;
+    left: calc(50% - 12.5rem);
+    top: 5rem;
+}
+
+#next{
+    position: absolute;
+    right: 15rem;
+    top: 40%;
+}
+
+#prev{
+    position: absolute;
+    left: 15rem;
+    top: 40%;
+}
+
+#next, #prev {
+    color: #fff;
+    background: none;
+    border: none;
+    font-size: xxx-large;
+    font-weight: bold;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+#prev:hover,
+#next:hover{
+    opacity: 1;
+}
+
+.teachers-slider>.card>.btn {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    background-color: #2b2d30 !important;
+    scale: 130%;
+}
+
+.teachers-slider>.card>.btn:hover {
+    scale: 140%;
+}
+
+.teachers-slider>.card>.btn:active {
+    scale: 90%;
+}
+/* teachers */
+
 /* footer */
 .footer {
     background-color: #1e1f22;
