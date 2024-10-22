@@ -276,3 +276,39 @@ section.active {
     color: #858585
 }
 /* footer */
+
+/* reviews */
+#reviews{
+    margin-top: 10rem;
+    text-align: center;
+    font-size: x-large;
+    color: gainsboro !important;
+}
+    
+.conture{
+    display: block;
+    border: 6px solid gainsboro;
+    border-style:ridge;
+    width: 500px;
+    height: 600px;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.2), rgb(0, 26, 10));
+    border-radius: 10px 150px 30px 150px;
+    text-shadow: #011010;
+    text-align: center;
+    margin: auto;
+    align-content: center;
+}
+    
+.carousel-caption {
+    background: linear-gradient(90deg, #707f1f, #ffb400, #037027, #636fbe, #707f1f);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textflow 5s linear infinite;
+}
+    @keyframes textflow {
+    from {background-position: 0% center}
+    to {background-position: 200% center}
+    }
+    
