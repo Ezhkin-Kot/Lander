@@ -149,9 +149,9 @@ h4 {
     color: gainsboro !important;
 }
 
-#text-center {
+.text-center {
     text-align: center;
-    padding: 10%;
+    padding: 4%;
     font-size: large;
     transition: 0.5s;
 }
@@ -279,7 +279,6 @@ section.active {
 
 /* reviews */
 #reviews{
-    margin-top: 10rem;
     text-align: center;
     font-size: x-large;
     color: gainsboro !important;
@@ -297,6 +296,7 @@ section.active {
     text-align: center;
     margin: auto;
     align-content: center;
+    margin-bottom: 4%;
 }
     
 .carousel-caption {
@@ -306,6 +306,7 @@ section.active {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: textflow 5s linear infinite;
+    margin-bottom: 4%;
 }
     @keyframes textflow {
     from {background-position: 0% center}
