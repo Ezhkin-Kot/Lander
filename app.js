@@ -33,7 +33,7 @@ function loadShow(){
     // Карточки справа от центральной
     for (var i = active + 1; i < cards.length; i++) {
         stt++;
-        cards[i].style.transform = `translateX(${120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(-0.5deg)`;
+        cards[i].style.transform = `translateX(${10*stt}rem) scale(${1 - 0.2*stt}) perspective(16px) rotateY(-0.5deg)`;
         cards[i].style.zIndex = -stt;
         cards[i].style.filter = 'blur(5px)';
         cards[i].style.opacity = stt > 2 ? 0 : 0.6;
@@ -42,7 +42,7 @@ function loadShow(){
     // Карточки слева от центральной
     for (var i = active - 1; i >= 0; i--) {
         stt++;
-        cards[i].style.transform = `translateX(${-120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(0.5deg)`;
+        cards[i].style.transform = `translateX(${-10*stt}rem) scale(${1 - 0.2*stt}) perspective(16px) rotateY(0.5deg)`;
         cards[i].style.zIndex = -stt;
         cards[i].style.filter = 'blur(5px)';
         cards[i].style.opacity = stt > 2 ? 0 : 0.6;
