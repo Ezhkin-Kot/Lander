@@ -386,19 +386,19 @@ section.active {
 }
 
 .row {
-    padding-left: 2%;
-    padding-right: 2%;
-}
+    padding-left: 5%;
+    padding-right: 5%;
 
-.col-6 {
-    i {
-        font-size: 50px;
-        background: gainsboro;
-        background-size: 200%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    .col-6 {
+        i {
+            font-size: 50px;
+            background: gainsboro;
+            background-size: 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        padding: 5%;
     }
-
-    padding: 5%;
 }
