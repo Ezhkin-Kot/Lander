@@ -196,23 +196,23 @@ section.active {
     justify-content: center;
     position: relative;
     width: 100%;
-    height: 34rem;
+    height: 40rem;
     overflow: hidden;
     margin-bottom: 10rem;
 }
 
 .teachers-slider>.card {
     position: absolute;
-    width: 25rem;
-    height: 34rem;
+    width: 30rem;
+    height: 40rem;
     background-color: #1e1f22;
     color: white;
     font-size: x-large;
-    border-radius: 15px;
-    padding: 20px;
+    border-radius: 20px;
+    padding: 25px;
     transition-property: transform, opacity;
     transition-duration: 1s;
-    left: calc(50% - 12.5rem);
+    left: calc(50% - 15rem);
 }
 
 #teachers>.text-center {
@@ -262,46 +262,55 @@ section.active {
 }
 
 .teachers-slider>.card>.teacher-img {
-    max-width: calc(25rem - 40px);
+    max-width: calc(30rem - 50px);
     background-size: cover;
+    margin-bottom: 1rem;
 }
 .teachers-slider>#card0>.teacher-img {
-    background-image: url("images/Tolstov-bg.jpg");
-    backdrop-filter: blur(5px);
+    background-image: url("images/Tolstov-bg.png");
 }
 .teachers-slider>#card1>.teacher-img {
-    background-image: url("images/Kudyakov-bg.jpg");
+    background-image: url("images/Kudyakov-bg.png");
 }
 .teachers-slider>#card2>.teacher-img {
-    background-image: url("images/Grigoryev-bg.jpg");
+    background-image: url("images/Grigoryev-bg.png");
 }
 .teachers-slider>#card3>.teacher-img {
-    background-image: url("images/Rudyak-bg.jpg");
+    background-image: url("images/Rudiak-bg.png");
 }
 .teachers-slider>#card4>.teacher-img {
-    background-image: url("images/Chernigin-bg.jpg");
+    background-image: url("images/Chernigin-bg.png");
 }
 .teachers-slider>#card5>.teacher-img {
-    background-image: url("images/Rydanov-bg.jpg");
+    background-image: url("images/Rydanov-bg.png");
 }
 
 .levitate-img {
-    max-width: calc(25rem - 40px);
+    max-width: calc(30rem - 50px);
     transform-origin: center;
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0px, 0);
 }
 .levitate {
-    animation: levitate-animation 2s ease-in-out infinite alternate;
-    filter: drop-shadow(10px 10px 5px #111);
+    animation: levitate-animation 2s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes levitate-animation {
     0% {
-        transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0px, 0);
+    }
+    50% {
+        backdrop-filter: blur(0);
+        transform: translate3d(0, -15px, 0);
     }
     100% {
-        transform: translate3d(0, -10px, 0);
+        backdrop-filter: blur(5px);
+        transform: translate3d(0, 0px, 0);
     }
+}
+
+.teachers-slider>.card>h3 {
+    z-index: 2;
 }
 /* teachers */
 
