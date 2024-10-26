@@ -383,9 +383,9 @@ section.active {
     padding-left: 5%;
     padding-right: 5%;
 
-    .col-6 {
+    .col {
         .i {
-            font-size: 50px;
+            font-size: 50pt;
             background: gainsboro;
             background-size: 200%;
             background-clip: text;
@@ -440,7 +440,7 @@ section.active {
 .footer h4 {
     color: #858585;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 13pt;
     border-bottom: 1px solid #858585;
     padding-bottom: 3px;
 }
@@ -453,3 +453,19 @@ section.active {
     color: #858585
 }
 /* footer */
+
+@media screen and (max-width: 480px) {
+    .row {
+
+        .col {
+            font-size: medium;
+            h3 {
+                font-size: large;
+            }
+            .i {
+                font-size: 30pt;
+            }
+            margin-bottom: 1rem;
+        }
+    }
+}
