@@ -260,6 +260,49 @@ section.active {
 .teachers-slider>.card>.btn:active {
     scale: 90%;
 }
+
+.teachers-slider>.card>.teacher-img {
+    max-width: calc(25rem - 40px);
+    background-size: cover;
+}
+.teachers-slider>#card0>.teacher-img {
+    background-image: url("images/Tolstov-bg.jpg");
+    backdrop-filter: blur(5px);
+}
+.teachers-slider>#card1>.teacher-img {
+    background-image: url("images/Kudyakov-bg.jpg");
+}
+.teachers-slider>#card2>.teacher-img {
+    background-image: url("images/Grigoryev-bg.jpg");
+}
+.teachers-slider>#card3>.teacher-img {
+    background-image: url("images/Rudyak-bg.jpg");
+}
+.teachers-slider>#card4>.teacher-img {
+    background-image: url("images/Chernigin-bg.jpg");
+}
+.teachers-slider>#card5>.teacher-img {
+    background-image: url("images/Rydanov-bg.jpg");
+}
+
+.levitate-img {
+    max-width: calc(25rem - 40px);
+    transform-origin: center;
+    transform: translate3d(0, 0, 0);
+}
+.levitate {
+    animation: levitate-animation 2s ease-in-out infinite alternate;
+    filter: drop-shadow(10px 10px 5px #111);
+}
+
+@keyframes levitate-animation {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, -10px, 0);
+    }
+}
 /* teachers */
 
 /* footer */
@@ -311,8 +354,8 @@ section.active {
     animation: textflow 5s linear infinite;
     margin-bottom: 4%;
 }
-    @keyframes textflow {
+
+@keyframes textflow {
     from {background-position: 0% center}
     to {background-position: 200% center}
-    }
-    
+}
