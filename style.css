@@ -17,6 +17,10 @@ body {
     background: linear-gradient(#010101, #021214);
 }
 
+.text-center {
+    color: white;
+}
+
 .btn {
     color: deepskyblue !important;
     background-color: #1e1f22 !important;
@@ -112,6 +116,19 @@ a {
     color: deepskyblue !important;
     text-decoration: none !important;
     transition: 0.5s;
+}
+
+#a-font>.btn {
+    scale: 110%;
+    margin: 1rem;
+}
+
+#a-font>.btn:hover {
+    scale: 120%;
+}
+
+#a-font>.btn:active {
+    scale: 100%;
 }
 
 .blink {
@@ -213,10 +230,6 @@ section.active {
     transition-property: transform, opacity;
     transition-duration: 1s;
     left: calc(50% - 15rem);
-}
-
-#teachers>.text-center {
-    color: white;
 }
 
 #next,
@@ -325,29 +338,6 @@ section.active {
 
 /* teachers */
 
-/* footer */
-.footer {
-    background-color: #1e1f22;
-}
-
-.footer h4 {
-    color: #858585;
-    text-transform: uppercase;
-    font-size: 13px;
-    border-bottom: 1px solid #858585;
-    padding-bottom: 3px;
-}
-
-.rights {
-    color: #858585;
-}
-
-.footer-icons {
-    color: #858585
-}
-
-/* footer */
-
 /* reviews */
 #reviews {
     text-align: center;
@@ -406,3 +396,60 @@ section.active {
         padding: 5%;
     }
 }
+/* reviews */
+
+/* feedback */
+#feedback-form {
+    justify-content: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 50rem;
+    left: calc(50% - 25rem);
+    margin-bottom: 5rem;
+}
+
+#feedback-form>input,
+#feedback-form>textarea {
+    background-color: #1e1f22;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 15px;
+}
+
+#feedback-form>textarea {
+    resize: vertical;
+    height: 10rem;
+    min-height: 10rem;
+}
+
+#feedback-form>.btn {
+    font-size: large;
+    align-self: center;
+    width: 15rem;
+    gap: 1rem;
+}
+/* feedback */
+
+/* footer */
+.footer {
+    background-color: #1e1f22;
+}
+
+.footer h4 {
+    color: #858585;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-bottom: 1px solid #858585;
+    padding-bottom: 3px;
+}
+
+.rights {
+    color: #858585;
+}
+
+.footer-icons {
+    color: #858585
+}
+/* footer */

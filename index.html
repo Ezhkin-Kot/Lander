@@ -22,6 +22,7 @@
             <a class="navbar-nav" href="#advantages">Почему мы?</a>
             <a class="navbar-nav" href="#teachers">Наши учителя</a>
             <a class="navbar-nav" href="#reviews">Отзывы студентов</a>
+            <a class="navbar-nav" href="#feedback">Обратная связь</a>
         </div>
     </nav>
     <!--Header-->
@@ -123,8 +124,6 @@
                     на практике, а также завести полезные знакомства.
                 </div>
             </div>
-
-
         </div>
     </section>
     <!--Teachers-->
@@ -195,7 +194,6 @@
 
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-
                 <div class="carousel-item active">
                     <span class="conture">
                         <p>"Онлайн-школа превзошла все мои ожидания! Курсы структурированы, а поддержка преподавателей
@@ -318,8 +316,20 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+    </section>
+    <!--Feedback-->
+    <section id="feedback">
+        <div class="container text-center">
+            <h1>Оставьте свой отзыв:</h1>
+        </div>
 
+        <form action="/submit-form" method="POST" id="feedback-form">
+            <input type="text" name="name" placeholder="Имя" maxlength="100" minlength="1" required />
+            <input type="email" name="email" placeholder="E-mail" maxlength="200" minlength="3" required />
+            <textarea name="message" placeholder="Отзыв" maxlength="1000" minlength="5" required></textarea>
 
+            <button class="btn bi bi-send" type="submit">Отправить</button>
+        </form>
     </section>
     <!--Footer-->
     <section class="footer">
