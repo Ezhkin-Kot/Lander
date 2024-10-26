@@ -297,6 +297,7 @@ section.active {
     transform-origin: center;
     transform: translate3d(0, 0px, 0);
 }
+
 .levitate {
     animation: levitate-animation 2s;
     animation-fill-mode: forwards;
@@ -306,10 +307,12 @@ section.active {
     0% {
         transform: translate3d(0, 0px, 0);
     }
+
     50% {
         backdrop-filter: blur(0);
         transform: translate3d(0, -15px, 0);
     }
+
     100% {
         backdrop-filter: blur(5px);
         transform: translate3d(0, 0px, 0);
@@ -319,6 +322,7 @@ section.active {
 .teachers-slider>.card>h3 {
     z-index: 2;
 }
+
 /* teachers */
 
 /* footer */
@@ -390,7 +394,7 @@ section.active {
     padding-right: 5%;
 
     .col-6 {
-        i {
+        .i {
             font-size: 50px;
             background: gainsboro;
             background-size: 200%;
