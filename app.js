@@ -21,22 +21,25 @@ sections.forEach(section => observer.observe(section));
 
 // Анимация карточек преподавателей
 let cards = document.querySelectorAll('.teachers-slider .card');
+let teachersBG = document.querySelectorAll('.teachers-slider .card .teacher-img');
+let levitates = document.querySelectorAll('.teachers-slider .card .teacher-img .levitate-img');
 let active = 0;
 
 function loadShow(){
     cards[active].style.transform = `none`;
     cards[active].style.zIndex = 1;
-    cards[active].style.filter = 'none';
+    cards[active].style.filter = `none`;
     cards[active].style.opacity = 1;
-
+    levitates[active].classList.add('levitate');
     let stt = 0;
     // Карточки справа от центральной
     for (var i = active + 1; i < cards.length; i++) {
         stt++;
         cards[i].style.transform = `translateX(${10*stt}rem) scale(${1 - 0.2*stt}) perspective(16px) rotateY(-0.5deg)`;
         cards[i].style.zIndex = -stt;
-        cards[i].style.filter = 'blur(5px)';
+        cards[i].style.filter = `blur(5px)`;
         cards[i].style.opacity = stt > 2 ? 0 : 0.6;
+        levitates[i].classList.remove('levitate');
     }
     stt = 0;
     // Карточки слева от центральной
@@ -44,8 +47,9 @@ function loadShow(){
         stt++;
         cards[i].style.transform = `translateX(${-10*stt}rem) scale(${1 - 0.2*stt}) perspective(16px) rotateY(0.5deg)`;
         cards[i].style.zIndex = -stt;
-        cards[i].style.filter = 'blur(5px)';
+        cards[i].style.filter = `blur(5px)`;
         cards[i].style.opacity = stt > 2 ? 0 : 0.6;
+        levitates[i].classList.remove('levitate');
     }
 }
 loadShow();
