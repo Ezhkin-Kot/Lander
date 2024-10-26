@@ -219,7 +219,8 @@ section.active {
     color: white;
 }
 
-#next, #prev {
+#next,
+#prev {
     color: #fff;
     background: none;
     border: none;
@@ -229,20 +230,20 @@ section.active {
     transition: opacity 0.5s;
 }
 
-#next{
+#next {
     position: absolute;
     right: 15rem;
     top: 40%;
 }
 
-#prev{
+#prev {
     position: absolute;
     left: 15rem;
     top: 40%;
 }
 
 #prev:hover,
-#next:hover{
+#next:hover {
     opacity: 1;
 }
 
@@ -266,21 +267,27 @@ section.active {
     background-size: cover;
     margin-bottom: 1rem;
 }
+
 .teachers-slider>#card0>.teacher-img {
     background-image: url("images/Tolstov-bg.png");
 }
+
 .teachers-slider>#card1>.teacher-img {
     background-image: url("images/Kudyakov-bg.png");
 }
+
 .teachers-slider>#card2>.teacher-img {
     background-image: url("images/Grigoryev-bg.png");
 }
+
 .teachers-slider>#card3>.teacher-img {
     background-image: url("images/Rudiak-bg.png");
 }
+
 .teachers-slider>#card4>.teacher-img {
     background-image: url("images/Chernigin-bg.png");
 }
+
 .teachers-slider>#card5>.teacher-img {
     background-image: url("images/Rydanov-bg.png");
 }
@@ -318,6 +325,7 @@ section.active {
 .footer {
     background-color: #1e1f22;
 }
+
 .footer h4 {
     color: #858585;
     text-transform: uppercase;
@@ -325,25 +333,28 @@ section.active {
     border-bottom: 1px solid #858585;
     padding-bottom: 3px;
 }
+
 .rights {
     color: #858585;
 }
+
 .footer-icons {
     color: #858585
 }
+
 /* footer */
 
 /* reviews */
-#reviews{
+#reviews {
     text-align: center;
     font-size: x-large;
     color: gainsboro !important;
 }
-    
-.conture{
+
+.conture {
     display: block;
     border: 6px solid gainsboro;
-    border-style:ridge;
+    border-style: ridge;
     width: 500px;
     height: 600px;
     background: linear-gradient(45deg, rgba(0, 0, 0, 0.2), rgb(0, 26, 10));
@@ -353,7 +364,7 @@ section.active {
     align-content: center;
     margin-bottom: 4%;
 }
-    
+
 .carousel-caption {
     background: linear-gradient(90deg, #707f1f, #ffb400, #037027, #636fbe, #707f1f);
     background-size: 200% auto;
@@ -365,6 +376,29 @@ section.active {
 }
 
 @keyframes textflow {
-    from {background-position: 0% center}
-    to {background-position: 200% center}
+    from {
+        background-position: 0% center
+    }
+
+    to {
+        background-position: 200% center
+    }
+}
+
+.row {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.col-6 {
+    i {
+        font-size: 50px;
+        background: gainsboro;
+        background-size: 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    padding: 5%;
 }
