@@ -139,7 +139,7 @@
                 </div>
                 <h3>Роберт Толстов</h3>
                 HTML CSS JavaScript
-                <a class="btn bi bi-box" href="">Записаться на курс></a>
+                <a class="btn bi bi-box open_pop_up" href="#">Записаться на курс></a>
             </div>
             <div class="card" id="card1">
                 <div class="teacher-img">
@@ -147,7 +147,7 @@
                 </div>
                 <h3>Артём Кудяков</h3>
                 Kotlin Python TypeScript
-                <a class="btn bi bi-box" href="">Записаться на курс></a>
+                <a class="btn bi bi-box open_pop_up" href="#">Записаться на курс></a>
             </div>
             <div class="card" id="card2">
                 <div class="teacher-img">
@@ -155,7 +155,7 @@
                 </div>
                 <h3>Данила Григорьев</h3>
                 C++ C# .NET PHP
-                <a class="btn bi bi-box" href="">Записаться на курс></a>
+                <a class="btn bi bi-box open_pop_up" href="#">Записаться на курс></a>
             </div>
             <div class="card" id="card3">
                 <div class="teacher-img">
@@ -163,7 +163,7 @@
                 </div>
                 <h3>Артём Рудяк</h3>
                 Python Go Docker
-                <a class="btn bi bi-box" href="">Записаться на курс></a>
+                <a class="btn bi bi-box open_pop_up" href="#">Записаться на курс></a>
             </div>
             <div class="card" id="card4">
                 <div class="teacher-img">
@@ -171,7 +171,7 @@
                 </div>
                 <h3>Михаил Чернигин</h3>
                 Ruby C Shell
-                <a class="btn bi bi-box" href="">Записаться на курс></a>
+                <a class="btn bi bi-box open_pop_up" href="#">Записаться на курс></a>
             </div>
             <div class="card" id="card5">
                 <div class="teacher-img">
@@ -179,13 +179,33 @@
                 </div>
                 <h3>Никита Рыданов</h3>
                 Rust C# Python
-                <a class="btn bi bi-box" href="">Записаться на курс></a>
+                <a class="btn bi bi-box open_pop_up" href="#">Записаться на курс></a>
             </div>
 
             <button id="next">></button>
             <button id="prev"><</button>
         </div>
     </section>
+
+    <!--PopUp window-->
+    <section></section>
+    <div class="pop_up" id="pop_up">
+        <div class="pop_up_container">
+            <div class="pop_up_body" id="pop_up_body">
+                <p>Зарегистрироваться на курс</p>
+                <form  id="contact-form">
+                    <input class="input" type="text" placeholder="Имя Фамилия" maxlength="100" minlength="1" required>
+                    <input class="input" type="text" placeholder="Телефон" maxlength="20" minlength="10" required>
+                    <input class="input" type="email" placeholder="Почта" maxlength="200" minlength="5" required>
+                    <button id="submit" >Отправить</button>
+                    <div class="react" id="react">Данные были получены! Ожидайте ответа оператора и убейте себя!</div>
+                </form>
+                <div class="pop_up_close" id="pop_up_close">&#10006</div>
+            </div>
+        </div>
+    </div>
+    </section>
+
     <!--Reviews-->
     <section id="reviews">
         <div class="container text-center">
