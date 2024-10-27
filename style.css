@@ -242,7 +242,7 @@ section.active {
 .teachers-slider>.card {
     position: absolute;
     width: 30rem;
-    height: 40rem;
+    height: 100%;
     background-color: #1e1f22;
     color: white;
     font-size: x-large;
@@ -266,19 +266,20 @@ section.active {
 
 #next {
     position: absolute;
-    right: 15rem;
+    right: 10%;
     top: 40%;
 }
 
 #prev {
     position: absolute;
-    left: 15rem;
+    left: 10%;
     top: 40%;
 }
 
 #prev:hover,
 #next:hover {
     opacity: 1;
+    z-index: 3;
 }
 
 .teachers-slider>.card>.btn {
@@ -293,7 +294,7 @@ section.active {
 }
 
 .teachers-slider>.card>.btn:active {
-    scale: 90%;
+    scale: 110%;
 }
 
 .teachers-slider>.card>.teacher-img {
@@ -487,13 +488,87 @@ section.active {
             margin-bottom: 1rem;
         }
     }
+    
+    .teachers-slider {
+        height: 26rem !important;
+    }
+
+    .teachers-slider>.card {
+        width: 18rem !important;
+        font-size: small;
+        left: calc(50% - 9rem) !important;
+    }
+
+    .teachers-slider>.card>.btn {
+        scale: 100% !important;
+        margin-left: 0.4rem;
+        margin-top: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: medium !important;
+    }
+
+    #header {
+        background-size: contain;
+    }
+
+    #header>div>h4 {
+        font-size: 1rem;
+        margin-bottom: 4rem !important;
+    }
+
+    .row {
+        .col {
+            font-size: medium;
+            h3 {
+                font-size: large;
+            }
+            .i {
+                font-size: 3rem;
+            }
+            margin-bottom: 1rem;
+        }
+    }
 
     #a-font>.btn {
         font-size: 0.8rem !important;
-        scale: 90%;
+        scale: 100%;
     }
 
     #a-font>.btn:active {
-        scale: 80%;
+        scale: 90%;
+    }
+
+    .teachers-slider {
+        height: 27.5rem;
+    }
+
+    .teachers-slider>.card {
+        padding: 2.5%;
+        width: 19.5rem;
+        font-size: medium;
+        border-radius: 15px;
+        left: calc(50% - 9.750rem);
+    }
+
+    .teachers-slider>.card>.btn {
+        scale: 100% !important;
+        margin-left: 0.4rem;
+        margin-top: 0.6rem;
+    }
+
+    #next {
+        position: absolute;
+        right: 5%;
+        top: 35%;
+    }
+
+    #prev {
+        position: absolute;
+        left: 5%;
+        top: 35%;
     }
 }
