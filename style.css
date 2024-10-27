@@ -64,6 +64,7 @@ body {
     z-index: 10;
 }
 
+/* navbar */
 #navbar {
     position: fixed !important;
     top: 0 !important;
@@ -100,8 +101,8 @@ nav {
     display: block;
     position: relative !important;
     background-color: #1e1f22;
-
 }
+/* navbar */
 
 a {
     color: whitesmoke !important;
@@ -160,13 +161,6 @@ h4 {
     padding-top: 3% !important;
 }
 
-#advantages {
-    margin-top: 10rem;
-    text-align: justify;
-    font-size: x-large;
-    color: gainsboro !important;
-}
-
 .text-center {
     text-align: center;
     padding: 4%;
@@ -207,6 +201,33 @@ section.active {
     transition: 0.2s;
 }
 
+/* advantages */
+#advantages {
+    margin-top: 10rem;
+    text-align: justify;
+    font-size: x-large;
+    color: gainsboro !important;
+}
+
+.row {
+    padding-left: 5%;
+    padding-right: 5%;
+
+    .col {
+        .i {
+            font-size: 4rem;
+            background: gainsboro;
+            background-size: 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        padding: 5%;
+    }
+}
+/* advantages */
+
 /* teachers */
 .teachers-slider {
     display: flex;
@@ -226,7 +247,7 @@ section.active {
     color: white;
     font-size: x-large;
     border-radius: 20px;
-    padding: 25px;
+    padding: 1.2rem;
     transition-property: transform, opacity;
     transition-duration: 1s;
     left: calc(50% - 15rem);
@@ -276,7 +297,7 @@ section.active {
 }
 
 .teachers-slider>.card>.teacher-img {
-    max-width: calc(30rem - 50px);
+    max-width: 28.8rem;
     background-size: cover;
     margin-bottom: 1rem;
 }
@@ -306,7 +327,7 @@ section.active {
 }
 
 .levitate-img {
-    max-width: calc(30rem - 50px);
+    max-width: 100%;
     transform-origin: center;
     transform: translate3d(0, 0px, 0);
 }
@@ -349,8 +370,8 @@ section.active {
     display: block;
     border: 6px solid gainsboro;
     border-style: ridge;
-    width: 500px;
-    height: 600px;
+    width: 30rem;
+    height: 36rem;
     background: linear-gradient(45deg, rgba(0, 0, 0, 0.2), rgb(0, 26, 10));
     border-radius: 10px 150px 30px 150px;
     text-align: center;
@@ -371,29 +392,11 @@ section.active {
 
 @keyframes textflow {
     from {
-        background-position: 0% center
+        background-position: 0 center
     }
 
     to {
         background-position: 200% center
-    }
-}
-
-.row {
-    padding-left: 5%;
-    padding-right: 5%;
-
-    .col {
-        .i {
-            font-size: 50pt;
-            background: gainsboro;
-            background-size: 200%;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        padding: 5%;
     }
 }
 /* reviews */
@@ -440,7 +443,7 @@ section.active {
 .footer h4 {
     color: #858585;
     text-transform: uppercase;
-    font-size: 13pt;
+    font-size: 1rem;
     border-bottom: 1px solid #858585;
     padding-bottom: 3px;
 }
@@ -455,17 +458,42 @@ section.active {
 /* footer */
 
 @media screen and (max-width: 480px) {
-    .row {
+    html {
+        font-size: smaller !important;
+    }
 
+    #header {
+        background-size: contain;
+    }
+
+    #header>div>#brand {
+        margin-top: 15rem;
+    }
+
+    #header>div>h4 {
+        font-size: 1rem;
+        margin-bottom: 4rem !important;
+    }
+
+    .row {
         .col {
             font-size: medium;
             h3 {
                 font-size: large;
             }
             .i {
-                font-size: 30pt;
+                font-size: 3rem;
             }
             margin-bottom: 1rem;
         }
+    }
+
+    #a-font>.btn {
+        font-size: 0.8rem !important;
+        scale: 90%;
+    }
+
+    #a-font>.btn:active {
+        scale: 80%;
     }
 }
