@@ -14,7 +14,8 @@ html {
 body {
     font-family: 'JetBrainsMono' !important;
     background-color: #010101 !important;
-    background: linear-gradient(#010101, #021214);
+    background: linear-gradient(149deg, rgba(0, 0, 0, 1) 25%, rgba(1, 14, 15, 1) 37%, rgba(0, 0, 0, 1) 49%,
+    rgba(4, 2, 29, 1) 59%, rgba(0, 0, 0, 1) 84%, rgba(2, 30, 36, 1) 100%);
 }
 
 .text-center {
@@ -64,15 +65,19 @@ body {
     z-index: 10;
 }
 
+/* navbar */
 #navbar {
     position: fixed !important;
-    top: 0 !important;
+    top: 0;
     z-index: 10 !important;
-    width: 100%;
+    width: 100vw;
     height: 3.5rem;
     display: flex;
     color: white;
-    background-color: #1e1f22;
+    background: linear-gradient(180deg,rgba(13,13,13,.8),rgba(13,13,13,0));
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: all .4s;
     opacity: 0.8;
     transition-property: opacity !important;
     transition-duration: 0.25s !important;
@@ -102,6 +107,7 @@ nav {
     background-color: #1e1f22;
 
 }
+/* navbar */
 
 a {
     color: whitesmoke !important;
@@ -113,14 +119,15 @@ a {
 }
 
 #a-font {
-    color: deepskyblue !important;
-    text-decoration: none !important;
+    color: deepskyblue;
+    text-decoration: none;
     transition: 0.5s;
 }
 
 #a-font>.btn {
     scale: 110%;
     margin: 1rem;
+    white-space: nowrap;
 }
 
 #a-font>.btn:hover {
@@ -158,13 +165,6 @@ a {
 
 h4 {
     padding-top: 3% !important;
-}
-
-#advantages {
-    margin-top: 10rem;
-    text-align: justify;
-    font-size: x-large;
-    color: gainsboro !important;
 }
 
 .text-center {
@@ -207,6 +207,48 @@ section.active {
     transition: 0.2s;
 }
 
+/* advantages */
+#advantages {
+    margin-top: 10rem;
+    text-align: justify;
+    font-size: x-large;
+    color: gainsboro !important;
+}
+
+.row {
+    padding-left: 2%;
+    padding-right: 2%;
+
+    .col {
+        .i {
+            font-size: 4rem;
+            background: gainsboro;
+            background-size: 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0.8;
+        }
+
+        h3 {
+            color: #097a70;
+            background-image: linear-gradient(90deg, #09af91, #7fc7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .text-wrapper {
+            height: 25rem;
+            padding: 4%;
+            border: 2px solid rgba(127, 127, 127, 0.5);
+            border-radius: 15px;
+        }
+
+        padding: 4%;
+    }
+}
+/* advantages */
+
 /* teachers */
 .teachers-slider {
     display: flex;
@@ -221,15 +263,15 @@ section.active {
 .teachers-slider>.card {
     position: absolute;
     width: 30rem;
-    height: 40rem;
-    background-color: #1e1f22;
+    height: 100%;
+    background: linear-gradient(155deg, rgba(30,31,34,1) 60%, rgba(2,23,28,1) 100%);
     color: white;
     font-size: x-large;
     border-radius: 20px;
-    padding: 25px;
+    padding: 1.2rem;
     transition-property: transform, opacity;
     transition-duration: 1s;
-    left: calc(50% - 15rem);
+    margin: auto;
 }
 
 #next,
@@ -245,19 +287,20 @@ section.active {
 
 #next {
     position: absolute;
-    right: 15rem;
+    right: 10%;
     top: 40%;
 }
 
 #prev {
     position: absolute;
-    left: 15rem;
+    left: 10%;
     top: 40%;
 }
 
 #prev:hover,
 #next:hover {
     opacity: 1;
+    z-index: 3;
 }
 
 .teachers-slider>.card>.btn {
@@ -272,11 +315,11 @@ section.active {
 }
 
 .teachers-slider>.card>.btn:active {
-    scale: 90%;
+    scale: 110%;
 }
 
 .teachers-slider>.card>.teacher-img {
-    max-width: calc(30rem - 50px);
+    max-width: 28.8rem;
     background-size: cover;
     margin-bottom: 1rem;
 }
@@ -306,7 +349,7 @@ section.active {
 }
 
 .levitate-img {
-    max-width: calc(30rem - 50px);
+    max-width: 100%;
     transform-origin: center;
     transform: translate3d(0, 0px, 0);
 }
@@ -349,10 +392,10 @@ section.active {
     display: block;
     border: 6px solid gainsboro;
     border-style: ridge;
-    width: 500px;
-    height: 600px;
+    width: 30rem;
+    height: 36rem;
     background: linear-gradient(45deg, rgba(0, 0, 0, 0.2), rgb(0, 26, 10));
-    border-radius: 10px 150px 30px 150px;
+    border-radius: 5% 30% 8% 30%;
     text-align: center;
     margin: auto;
     align-content: center;
@@ -371,29 +414,11 @@ section.active {
 
 @keyframes textflow {
     from {
-        background-position: 0% center
+        background-position: 0 center
     }
 
     to {
         background-position: 200% center
-    }
-}
-
-.row {
-    padding-left: 5%;
-    padding-right: 5%;
-
-    .col-6 {
-        .i {
-            font-size: 50px;
-            background: gainsboro;
-            background-size: 200%;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        padding: 5%;
     }
 }
 /* reviews */
@@ -405,14 +430,14 @@ section.active {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: 50rem;
-    left: calc(50% - 25rem);
-    margin-bottom: 5rem;
+    width: 40vw;
+    margin: auto auto 5rem auto;
 }
 
 #feedback-form>input,
 #feedback-form>textarea {
     background-color: #1e1f22;
+    opacity: 90%;
     color: white;
     padding: 0.5rem;
     border-radius: 15px;
@@ -435,18 +460,23 @@ section.active {
 /* footer */
 .footer {
     background-color: #1e1f22;
+    padding-bottom: 1rem;
 }
 
 .footer h4 {
     color: #858585;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 1rem;
     border-bottom: 1px solid #858585;
     padding-bottom: 3px;
 }
 
 .rights {
     color: #858585;
+}
+
+.rights>span {
+    white-space: nowrap;
 }
 
 .footer-icons {
@@ -467,48 +497,49 @@ section.active {
     transition: .4s ease-in-out;
 }
 
-.pop_up.open{
+.pop_up.open {
     transform: translate(0%) scale(100%); 
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.pop_up_container{
+.pop_up_container {
     display: flex;
     width: 100%;
     height: 100%;
 }
 
-.pop_up_body{
+.pop_up_body {
+    padding: 2%;
     position: relative;
     display: block;
-    width: 700px;
-    height: 600px;
-    background: linear-gradient(135deg, #373832, #0a3611);
-    border-radius: 20px;
+    width: 40rem;
+    height: 35rem;
+    background: linear-gradient(45deg, #121212 0%, #001B1C 50%, #121212 100%);
+    border: 1px solid #7F7F7F7F;
+    border-radius: 1.5rem;
     text-align: center;
     align-content: center;
-    margin:auto;
-    margin-top: 8%;
+    margin: auto;
 }
 
-.pop_up_body p{
-    font-size: 28px;
+.pop_up_body p {
+    margin-bottom: 6%;
+    font-size: 2rem;
     font-weight: 600;
     color: #ffffff;
-    margin-bottom: 40px;
 }
 
-.pop_up_body input{
+.pop_up_body input {
     display: block;
-    margin: 25px auto 0px auto;
-    width: 330px;
-    padding: 17px 20px;
-    background-color: #e5e5e5;
-    border-radius: 10px;
-    border: none;
+    margin: 4% auto 0 auto;
+    border: 1px solid gainsboro;
+    width: 30rem;
+    padding: 2.5% 3%;
+    background-color: #1e1f22;
+    border-radius: 15px;
     font-weight: 500;
-    font-size: 18px;
-    color: #000000
+    font-size: 1.2rem;
+    color: #e5e5e5;
 }
 
 .pop_up_body input:focus {
@@ -518,34 +549,345 @@ section.active {
 .pop_up_body button {
     cursor: pointer;
     display: block;
-    width: 300px;
-    margin: 60px auto 0px auto;
-    padding: 20px 0px;
+    width: 20rem;
+    margin: 5% auto 0 auto;
+    padding: 2.5% 0;
     font-weight: 500;
     font-size: large;
     border: none;
-    border-radius: 40px;
+    border-radius: 1.5rem;
     color:#000000;
     background-color: #ffb400;
+    transition: scale 0.2s ease-in-out;
+}
+
+.pop_up_body button:hover {
+    scale: 105%;
+    background-color: #ffbf00;
+}
+
+.pop_up_body button:active {
+    scale: 100%;
+    background-color: #ccb074;
 }
 
 .pop_up_close{
     color: white;
     position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 21px;
+    top: 2%;
+    right: 3%;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
 .react{
-    padding-top: 20px;
+    padding-top: 3%;
     display: none;
-    color:#09f758;
-    font-size: 21px;
+    color: #ffb400;
+    font-size: 1.25rem;
     transform: translate(0) scale(0);
 }
+
 .react.open{
     display: block;
     transform: translate(0%) scale(100%);
+}
+
+/* adaptation */
+@media screen and (max-width: 768px) {
+    html {
+        font-size: medium;
+    }
+
+    body {
+        background: linear-gradient(149deg, rgba(0, 0, 0, 1) 25%, rgba(1, 14, 15, 1) 37%, rgba(0, 0, 0, 1) 49%,
+        rgba(4, 2, 29, 1) 70%, rgba(0, 0, 0, 1) 84%, rgba(2, 30, 36, 1) 100%);
+    }
+
+    #navbar {
+        z-index: 12 !important;
+        font-size: small;
+    }
+
+    #navbar>.navbar-brand {
+        margin-left: 1rem;
+        font-size: medium;
+    }
+
+    #navbar>.navbar-nav {
+        margin-left: 1.5rem;
+    }
+
+    #header {
+        background-size: contain;
+    }
+
+    #header>div>h4 {
+        font-size: 1rem;
+        margin-bottom: 4rem !important;
+    }
+
+    .row {
+        .col {
+            font-size: medium;
+            margin-bottom: 1rem;
+
+            .i {
+                font-size: 3rem;
+            }
+
+            h3 {
+                font-size: large;
+            }
+
+            .text-wrapper {
+                height: auto;
+            }
+        }
+    }
+
+    #a-font>.btn {
+        font-size: 0.8rem;
+        scale: 100%;
+    }
+
+    #a-font>.btn:active {
+        scale: 90%;
+    }
+
+    .teachers-slider {
+        height: 27.5rem;
+    }
+
+    .teachers-slider>.card {
+        padding: 2.5%;
+        width: 19.5rem;
+        font-size: medium;
+        border-radius: 15px;
+    }
+
+    .teachers-slider>.card>.btn {
+        scale: 100% !important;
+        margin-left: 0.4rem;
+        margin-top: 0.6rem;
+    }
+
+    #next {
+        position: absolute;
+        right: 5%;
+        top: 35%;
+    }
+
+    #prev {
+        position: absolute;
+        left: 5%;
+        top: 35%;
+    }
+
+    .conture {
+        font-size: medium;
+        padding: 4%;
+        width: 20rem;
+        height: 25rem;
+    }
+
+    .carousel-caption {
+        margin-top: 4rem;
+        padding: 5%;
+    }
+
+    #feedback-form {
+        gap: 0.6rem;
+        width: 60vw;
+    }
+
+    .footer-icons {
+        font-size: 1.5rem;
+    }
+
+    .footer-icons>a {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .pop_up_body{
+        width: 35rem;
+        height: 32rem;
+    }
+
+    .pop_up_body p{
+        font-size: 2rem;
+    }
+
+    .pop_up_body input{
+        padding: 2% 3%;
+    }
+
+    .pop_up_body button {
+        padding: 2% 0;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    #feedback-form {
+        width: 80vw !important;
+    }
+
+    .pop_up_body {
+        width: 25rem;
+        height: 28rem;
+    }
+
+    .pop_up_body p {
+        font-size: 1.4rem;
+    }
+
+    .pop_up_body input {
+        width: 22rem;
+    }
+
+    .pop_up_body button {
+        width: 15rem;
+    }
+
+    .react{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: small;
+    }
+
+    #navbar {
+        font-size: x-small;
+        height: 5%;
+    }
+
+    #header>div>#brand {
+        margin-top: 15rem;
+    }
+
+    #header>div>h4 {
+        font-size: 1rem;
+        margin-bottom: 4rem !important;
+    }
+
+    #a-font {
+        text-wrap: balance;
+    }
+
+    .teachers-slider {
+        height: 26rem;
+    }
+
+    .teachers-slider>.card {
+        width: 18rem;
+        font-size: small;
+    }
+
+    .teachers-slider>.card>.btn {
+        scale: 100%;
+        margin-left: 0.4rem;
+        margin-top: 0.6rem;
+    }
+
+    #feedback-form {
+        width: 80vw;
+    }
+
+    #feedback-form>.btn {
+        font-size: medium;
+        width: 12rem;
+    }
+
+    .pop_up_body {
+        width: 30rem;
+        height: 30rem;
+    }
+
+    .pop_up_body p {
+        font-size: 1.6rem;
+    }
+
+    .pop_up_body input {
+        width: 28rem;
+    }
+
+    .pop_up_body button {
+        width: 20rem;
+        padding: 1.5% 0;
+    }
+
+    .react{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    html {
+        font-size: xx-small !important;
+    }
+
+    #navbar {
+        font-size: x-small !important;
+    }
+
+    #navbar>.navbar-brand {
+        font-size: small !important;
+    }
+
+    #header>div>#brand {
+        font-size: xx-large;
+    }
+
+    #header>div>h4 {
+        font-size: 1.35rem;
+    }
+
+    #a-font>.btn {
+        font-size: 1.2rem !important;
+    }
+
+    .teachers-slider {
+        height: 32rem !important;
+    }
+
+    .teachers-slider>.card {
+        width: 23rem !important;
+    }
+
+    .teachers-slider>.card>.btn {
+        scale: 110% !important;
+        margin-left: 0.4rem;
+        margin-top: 0.6rem;
+    }
+
+    #next,
+    #prev {
+        font-size: x-large;
+    }
+
+    .footer-icons {
+        font-size: 2rem;
+    }
+
+    .pop_up_body {
+        width: 90vw;
+        height: 35rem;
+    }
+
+    .pop_up_body p {
+        font-size: 2rem;
+    }
+
+    .pop_up_body input {
+        width: 80vw;
+    }
+
+    .pop_up_body button {
+        width: 60vw;
+        padding: 1% 0;
+    }
 }
