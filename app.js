@@ -65,3 +65,30 @@ prev.onclick = function(){
     active = active - 1 >= 0 ? active - 1 : active;
     loadShow();
 }
+// попап (папоапоаопопопоапо)
+const openPopUp = document.querySelectorAll('.open_pop_up');
+const closePopUp = document.getElementById('pop_up_close');
+const popUp = document.getElementById('pop_up');
+const sub = document.getElementById('submit');
+
+
+openPopUp.forEach(link => {
+link.addEventListener('click',function(e){
+    e.preventDefault();
+    popUp.classList.add('open');});
+});
+
+closePopUp.addEventListener('click',function(){
+    popUp.classList.remove('open');
+})
+
+sub.addEventListener('click',function(e){
+    e.preventDefault();
+    react.classList.add('open');
+    setTimeout(
+        () => {
+            popUp.classList.remove('open');
+        },
+        3 * 1000
+      );
+})
