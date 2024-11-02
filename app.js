@@ -2,7 +2,7 @@
 const sections = document.querySelectorAll('section');
 
 const observerOptions = {
-    threshold: 0.4 // Процент пересечения элемента с экраном (40%)
+    threshold: 0.3 // Процент пересечения элемента с экраном (30%)
 };
 
 const observerCallback = (entries, observer) => {
@@ -73,9 +73,9 @@ const sub = document.getElementById('submit');
 
 
 openPopUp.forEach(link => {
-link.addEventListener('click',function(e){
-    e.preventDefault();
-    popUp.classList.add('open');});
+    link.addEventListener('click',function(e){
+        e.preventDefault();
+        popUp.classList.add('open');});
 });
 
 closePopUp.addEventListener('click',function(){
@@ -90,5 +90,5 @@ sub.addEventListener('click',function(e){
             popUp.classList.remove('open');
         },
         3 * 1000
-      );
+    );
 })

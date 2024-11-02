@@ -3,8 +3,13 @@ html {
 }
 
 @font-face {
-    font-family: 'JetBrainsMono';
+    font-family: 'JetBrainsMono-Regular';
     src: url('fonts/ttf/JetBrainsMono-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'JetBrainsMono-SemiBold';
+    src: url('fonts/ttf/JetBrainsMono-SemiBold.ttf');
 }
 
 ::-webkit-scrollbar {
@@ -12,14 +17,19 @@ html {
 }
 
 body {
-    font-family: 'JetBrainsMono' !important;
+    font-family: 'JetBrainsMono', sans-serif !important;
     background-color: #010101 !important;
-    background: linear-gradient(149deg, rgba(0, 0, 0, 1) 25%, rgba(1, 14, 15, 1) 37%, rgba(0, 0, 0, 1) 49%,
-    rgba(4, 2, 29, 1) 59%, rgba(0, 0, 0, 1) 84%, rgba(2, 30, 36, 1) 100%);
+    background:
+            linear-gradient(149deg, rgba(0, 0, 0, 1) 25%, rgba(1, 14, 15, 1) 35%, rgba(0, 0, 0, 1) 50%,
+            rgba(4, 2, 29, 1) 60%, rgba(0, 0, 0, 1) 80%, rgba(2, 30, 36, 1) 100%);
 }
 
 .text-center {
     color: white;
+    text-align: center;
+    padding: 4%;
+    font-size: large;
+    transition: 0.5s;
 }
 
 .btn {
@@ -54,33 +64,59 @@ body {
     }
 }
 
-#header {
-    margin: 0 !important;
-    background-image:
-        linear-gradient(to bottom, transparent 20%, #010101),
-        url('images/Back_2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 10%;
-    z-index: 10;
+a {
+    color: whitesmoke !important;
+    text-decoration: none !important;
+}
+
+#white-font2 {
+    color: gainsboro !important;
+}
+
+h4 {
+    padding-top: 3% !important;
+}
+
+.padding {
+    padding: 1%;
+}
+
+section {
+    opacity: 0.2;
+    transition: 0.2s;
+}
+
+section.active {
+    opacity: 1;
+    transition: 0.2s;
 }
 
 /* navbar */
+nav {
+    display: block;
+    position: relative;
+    background-color: #1e1f22;
+}
+
 #navbar {
-    position: fixed !important;
+    position: fixed;
     top: 0;
-    z-index: 10 !important;
+    z-index: 10;
     width: 100vw;
     height: 3.5rem;
     display: flex;
-    color: white;
+    color: gainsboro;
     background: linear-gradient(180deg,rgba(13,13,13,.8),rgba(13,13,13,0));
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     transition: all .4s;
     opacity: 0.8;
-    transition-property: opacity !important;
-    transition-duration: 0.25s !important;
+    transition-property: opacity;
+    transition-duration: 0.25s;
+}
+
+#navbar:hover {
+    opacity: 1;
 }
 
 #navbar>.navbar-brand {
@@ -91,56 +127,60 @@ body {
     font-weight: bold;
 }
 
-#navbar:hover {
-    opacity: 1;
-}
-
 #navbar>.navbar-nav {
     justify-content: space-evenly;
     align-items: center;
     margin-left: 4rem;
+    opacity: 0.6;
 }
 
-nav {
-    display: block;
-    position: relative !important;
-    background-color: #1e1f22;
-
+#navbar>.navbar-brand:hover {
+    opacity: 0.8;
+}
+#navbar>.navbar-nav:hover {
+    opacity: 1;
 }
 /* navbar */
 
-a {
-    color: whitesmoke !important;
-    text-decoration: none !important;
+/* header */
+#header {
+    margin: 0 !important;
+    background-image:
+            linear-gradient(to bottom, transparent 20%, #010101),
+            url('images/BG1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10%;
+    z-index: 10;
 }
 
-#white-font2 {
-    color: gainsboro !important;
+#brand {
+    font-family: 'JetBrainsMono-SemiBold', monospace;
 }
 
-#a-font {
+#header-buttons {
     color: deepskyblue;
     text-decoration: none;
     transition: 0.5s;
 }
 
-#a-font>.btn {
+#header-buttons>.btn {
     scale: 110%;
     margin: 1rem;
     white-space: nowrap;
 }
 
-#a-font>.btn:hover {
+#header-buttons>.btn:hover {
     scale: 120%;
 }
 
-#a-font>.btn:active {
+#header-buttons>.btn:active {
     scale: 100%;
 }
 
 .blink {
-    display: inline-block !important;
-    color: orange;
+    display: inline-block;
+    color: #ffb400;
     animation: blink 1s infinite;
     font-weight: bold;
 }
@@ -163,26 +203,11 @@ a {
     }
 }
 
-h4 {
-    padding-top: 3% !important;
-}
-
-.text-center {
-    text-align: center;
-    padding: 4%;
-    font-size: large;
-    transition: 0.5s;
-}
-
-.padding {
-    padding: 1%;
-}
-
 .typewriter {
-    color: white !important;
+    color: white;
     white-space: nowrap;
     margin: 0 auto;
-    text-align: center !important;
+    text-align: center;
     overflow: hidden;
     animation: typing 5s;
 }
@@ -196,30 +221,27 @@ h4 {
         width: 100%;
     }
 }
-
-section {
-    opacity: 0.2;
-    transition: 0.2s;
-}
-
-section.active {
-    opacity: 1 !important;
-    transition: 0.2s;
-}
+/* header */
 
 /* advantages */
 #advantages {
     margin-top: 10rem;
     text-align: justify;
     font-size: x-large;
-    color: gainsboro !important;
+    color: gainsboro;
 }
 
-.row {
+#advantages>.text-center {
+    padding: 0;
+}
+
+#advantages .row {
     padding-left: 2%;
     padding-right: 2%;
 
     .col {
+        padding: 4%;
+
         .i {
             font-size: 4rem;
             background: gainsboro;
@@ -238,13 +260,11 @@ section.active {
         }
 
         .text-wrapper {
-            height: 25rem;
+            min-height: 26rem;
             padding: 4%;
             border: 2px solid rgba(127, 127, 127, 0.5);
             border-radius: 15px;
         }
-
-        padding: 4%;
     }
 }
 /* advantages */
@@ -267,6 +287,7 @@ section.active {
     background: linear-gradient(155deg, rgba(30,31,34,1) 60%, rgba(2,23,28,1) 100%);
     color: white;
     font-size: x-large;
+    white-space: nowrap;
     border-radius: 20px;
     padding: 1.2rem;
     transition-property: transform, opacity;
@@ -324,27 +345,27 @@ section.active {
     margin-bottom: 1rem;
 }
 
-.teachers-slider>#card0>.teacher-img {
+#card0>.teacher-img {
     background-image: url("images/Tolstov-bg.png");
 }
 
-.teachers-slider>#card1>.teacher-img {
+#card1>.teacher-img {
     background-image: url("images/Kudyakov-bg.png");
 }
 
-.teachers-slider>#card2>.teacher-img {
-    background-image: url("images/Grigoryev-bg.png");
+#card2>.teacher-img {
+    background-image: url("images/Grigoriev-bg.png");
 }
 
-.teachers-slider>#card3>.teacher-img {
+#card3>.teacher-img {
     background-image: url("images/Rudiak-bg.png");
 }
 
-.teachers-slider>#card4>.teacher-img {
+#card4>.teacher-img {
     background-image: url("images/Chernigin-bg.png");
 }
 
-.teachers-slider>#card5>.teacher-img {
+#card5>.teacher-img {
     background-image: url("images/Rydanov-bg.png");
 }
 
@@ -390,20 +411,19 @@ section.active {
 
 .conture {
     display: block;
-    border: 6px solid gainsboro;
-    border-style: ridge;
+    border: 6px ridge gainsboro;
     width: 30rem;
     height: 36rem;
     background: linear-gradient(45deg, rgba(0, 0, 0, 0.2), rgb(0, 26, 10));
     border-radius: 5% 30% 8% 30%;
     text-align: center;
-    margin: auto;
     align-content: center;
-    margin-bottom: 4%;
+    margin: auto auto 4% auto;
 }
 
 .carousel-caption {
-    background: linear-gradient(90deg, #707f1f, #ffb400, #037027, #636fbe, #707f1f);
+    background:
+            linear-gradient(90deg, #707f1f, #ffb400, #037027, #636fbe, #707f1f);
     background-size: 200% auto;
     background-clip: text;
     -webkit-background-clip: text;
@@ -484,7 +504,7 @@ section.active {
 }
 /* footer */
 
-/* Popup window */
+/* popup window */
 .pop_up {
     width: 100%;
     height: 100%;
@@ -498,7 +518,7 @@ section.active {
 }
 
 .pop_up.open {
-    transform: translate(0%) scale(100%); 
+    transform: translate(0%) scale(100%);
     background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -592,6 +612,7 @@ section.active {
     display: block;
     transform: translate(0%) scale(100%);
 }
+/* popup window */
 
 /* adaptation */
 @media screen and (max-width: 768px) {
@@ -600,8 +621,8 @@ section.active {
     }
 
     body {
-        background: linear-gradient(149deg, rgba(0, 0, 0, 1) 25%, rgba(1, 14, 15, 1) 37%, rgba(0, 0, 0, 1) 49%,
-        rgba(4, 2, 29, 1) 70%, rgba(0, 0, 0, 1) 84%, rgba(2, 30, 36, 1) 100%);
+        background: linear-gradient(149deg, rgba(0, 0, 0, 1) 25%, rgba(1, 14, 15, 1) 37%,
+        rgba(0, 0, 0, 1) 49%, rgba(4, 2, 29, 1) 70%, rgba(0, 0, 0, 1) 84%, rgba(2, 30, 36, 1) 100%);
     }
 
     #navbar {
@@ -646,12 +667,12 @@ section.active {
         }
     }
 
-    #a-font>.btn {
+    #header-buttons>.btn {
         font-size: 0.8rem;
         scale: 100%;
     }
 
-    #a-font>.btn:active {
+    #header-buttons>.btn:active {
         scale: 90%;
     }
 
@@ -774,7 +795,7 @@ section.active {
         margin-bottom: 4rem !important;
     }
 
-    #a-font {
+    #header-buttons {
         text-wrap: balance;
     }
 
@@ -846,7 +867,7 @@ section.active {
         font-size: 1.35rem;
     }
 
-    #a-font>.btn {
+    #header-buttons>.btn {
         font-size: 1.2rem !important;
     }
 
