@@ -17,7 +17,7 @@ html {
 }
 
 body {
-    font-family: 'JetBrainsMono', sans-serif !important;
+    font-family: 'JetBrainsMono-Regular', sans-serif !important;
     background-color: #010101 !important;
     background:
         linear-gradient(149deg, rgba(0, 0, 0, 1) 25%, rgba(1, 14, 15, 1) 35%, rgba(0, 0, 0, 1) 50%,
@@ -630,9 +630,10 @@ nav {
 
     body {
         background: linear-gradient(149deg, rgba(0, 0, 0, 1) 25%, rgba(1, 14, 15, 1) 37%,
-                rgba(0, 0, 0, 1) 49%, rgba(4, 2, 29, 1) 70%, rgba(0, 0, 0, 1) 84%, rgba(2, 30, 36, 1) 100%);
+        rgba(0, 0, 0, 1) 49%, rgba(4, 2, 29, 1) 70%, rgba(0, 0, 0, 1) 84%, rgba(2, 30, 36, 1) 100%);
     }
 
+    /* navbar */
     #navbar {
         z-index: 12 !important;
         font-size: small;
@@ -646,7 +647,9 @@ nav {
     #navbar>.navbar-nav {
         margin-left: 1.5rem;
     }
+    /* navbar */
 
+    /* header */
     #header {
         background-size: contain;
     }
@@ -656,6 +659,17 @@ nav {
         margin-bottom: 4rem !important;
     }
 
+    #header-buttons>.btn {
+        font-size: 0.8rem;
+        scale: 100%;
+    }
+
+    #header-buttons>.btn:active {
+        scale: 90%;
+    }
+    /* header */
+
+    /* advantages */
     .row {
         .col {
             font-size: medium;
@@ -674,16 +688,9 @@ nav {
             }
         }
     }
+    /* advantages */
 
-    #header-buttons>.btn {
-        font-size: 0.8rem;
-        scale: 100%;
-    }
-
-    #header-buttons>.btn:active {
-        scale: 90%;
-    }
-
+    /* teachers */
     .teachers-slider {
         height: 27.5rem;
     }
@@ -712,7 +719,9 @@ nav {
         left: 5%;
         top: 35%;
     }
+    /* teachers */
 
+    /* reviews */
     .conture {
         font-size: medium;
         padding: 4%;
@@ -724,12 +733,16 @@ nav {
         margin-top: 4rem;
         padding: 5%;
     }
+    /* reviews */
 
+    /* feedback */
     #feedback-form {
         gap: 0.6rem;
         width: 60vw;
     }
+    /* feedback */
 
+    /* footer */
     .footer-icons {
         font-size: 1.5rem;
     }
@@ -738,30 +751,36 @@ nav {
         margin-left: 1rem;
         margin-right: 1rem;
     }
+    /* footer */
 
-    .pop_up_body {
+    /* popup window */
+    .pop_up_body{
         width: 35rem;
         height: 32rem;
     }
 
-    .pop_up_body p {
+    .pop_up_body p{
         font-size: 2rem;
     }
 
-    .pop_up_body input {
+    .pop_up_body input{
         padding: 2% 3%;
     }
 
     .pop_up_body button {
         padding: 2% 0;
     }
+    /* popup window */
 }
 
 @media screen and (max-width: 620px) {
+    /* feedback */
     #feedback-form {
         width: 80vw !important;
     }
+    /* feedback */
 
+    /* popup window */
     .pop_up_body {
         width: 25rem;
         height: 28rem;
@@ -779,9 +798,10 @@ nav {
         width: 15rem;
     }
 
-    .react {
+    .react{
         font-size: 1rem;
     }
+    /* popup window */
 }
 
 @media screen and (max-width: 480px) {
@@ -789,11 +809,14 @@ nav {
         font-size: small;
     }
 
+    /* navbar */
     #navbar {
         font-size: x-small;
         height: 5%;
     }
+    /* navbar */
 
+    /* header */
     #header>div>#brand {
         margin-top: 15rem;
     }
@@ -806,7 +829,9 @@ nav {
     #header-buttons {
         text-wrap: balance;
     }
+    /* header */
 
+    /* teachers */
     .teachers-slider {
         height: 26rem;
     }
@@ -821,7 +846,9 @@ nav {
         margin-left: 0.4rem;
         margin-top: 0.6rem;
     }
+    /* teachers */
 
+    /* feedback */
     #feedback-form {
         width: 80vw;
     }
@@ -830,7 +857,9 @@ nav {
         font-size: medium;
         width: 12rem;
     }
+    /* feedback */
 
+    /* popup window */
     .pop_up_body {
         width: 30rem;
         height: 30rem;
@@ -849,9 +878,10 @@ nav {
         padding: 1.5% 0;
     }
 
-    .react {
+    .react{
         font-size: 1rem;
     }
+    /* popup window */
 }
 
 @media screen and (max-width: 400px) {
@@ -859,6 +889,7 @@ nav {
         font-size: xx-small !important;
     }
 
+    /* navbar */
     #navbar {
         font-size: x-small !important;
     }
@@ -866,7 +897,9 @@ nav {
     #navbar>.navbar-brand {
         font-size: small !important;
     }
+    /* navbar */
 
+    /* header */
     #header>div>#brand {
         font-size: xx-large;
     }
@@ -878,7 +911,9 @@ nav {
     #header-buttons>.btn {
         font-size: 1.2rem !important;
     }
+    /* header */
 
+    /* teachers */
     .teachers-slider {
         height: 32rem !important;
     }
@@ -897,11 +932,15 @@ nav {
     #prev {
         font-size: x-large;
     }
+    /* teachers */
 
+    /* footer */
     .footer-icons {
         font-size: 2rem;
     }
+    /* footer */
 
+    /* popup window */
     .pop_up_body {
         width: 90vw;
         height: 35rem;
@@ -919,4 +958,5 @@ nav {
         width: 60vw;
         padding: 1% 0;
     }
+    /* popup window */
 }
