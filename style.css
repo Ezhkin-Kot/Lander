@@ -630,7 +630,7 @@ nav {
 
     body {
         background: linear-gradient(149deg, rgba(0, 0, 0, 1) 25%, rgba(1, 14, 15, 1) 37%,
-        rgba(0, 0, 0, 1) 49%, rgba(4, 2, 29, 1) 70%, rgba(0, 0, 0, 1) 84%, rgba(2, 30, 36, 1) 100%);
+                rgba(0, 0, 0, 1) 49%, rgba(4, 2, 29, 1) 70%, rgba(0, 0, 0, 1) 84%, rgba(2, 30, 36, 1) 100%);
     }
 
     /* navbar */
@@ -647,6 +647,7 @@ nav {
     #navbar>.navbar-nav {
         margin-left: 1.5rem;
     }
+
     /* navbar */
 
     /* header */
@@ -667,6 +668,7 @@ nav {
     #header-buttons>.btn:active {
         scale: 90%;
     }
+
     /* header */
 
     /* advantages */
@@ -688,6 +690,7 @@ nav {
             }
         }
     }
+
     /* advantages */
 
     /* teachers */
@@ -719,6 +722,7 @@ nav {
         left: 5%;
         top: 35%;
     }
+
     /* teachers */
 
     /* reviews */
@@ -733,6 +737,7 @@ nav {
         margin-top: 4rem;
         padding: 5%;
     }
+
     /* reviews */
 
     /* feedback */
@@ -740,6 +745,7 @@ nav {
         gap: 0.6rem;
         width: 60vw;
     }
+
     /* feedback */
 
     /* footer */
@@ -751,25 +757,27 @@ nav {
         margin-left: 1rem;
         margin-right: 1rem;
     }
+
     /* footer */
 
     /* popup window */
-    .pop_up_body{
+    .pop_up_body {
         width: 35rem;
         height: 32rem;
     }
 
-    .pop_up_body p{
+    .pop_up_body p {
         font-size: 2rem;
     }
 
-    .pop_up_body input{
+    .pop_up_body input {
         padding: 2% 3%;
     }
 
     .pop_up_body button {
         padding: 2% 0;
     }
+
     /* popup window */
 }
 
@@ -778,6 +786,7 @@ nav {
     #feedback-form {
         width: 80vw !important;
     }
+
     /* feedback */
 
     /* popup window */
@@ -798,9 +807,10 @@ nav {
         width: 15rem;
     }
 
-    .react{
+    .react {
         font-size: 1rem;
     }
+
     /* popup window */
 }
 
@@ -814,6 +824,7 @@ nav {
         font-size: x-small;
         height: 5%;
     }
+
     /* navbar */
 
     /* header */
@@ -829,6 +840,7 @@ nav {
     #header-buttons {
         text-wrap: balance;
     }
+
     /* header */
 
     /* teachers */
@@ -846,6 +858,7 @@ nav {
         margin-left: 0.4rem;
         margin-top: 0.6rem;
     }
+
     /* teachers */
 
     /* feedback */
@@ -857,6 +870,7 @@ nav {
         font-size: medium;
         width: 12rem;
     }
+
     /* feedback */
 
     /* popup window */
@@ -878,9 +892,10 @@ nav {
         padding: 1.5% 0;
     }
 
-    .react{
+    .react {
         font-size: 1rem;
     }
+
     /* popup window */
 }
 
@@ -897,6 +912,7 @@ nav {
     #navbar>.navbar-brand {
         font-size: small !important;
     }
+
     /* navbar */
 
     /* header */
@@ -911,6 +927,7 @@ nav {
     #header-buttons>.btn {
         font-size: 1.2rem !important;
     }
+
     /* header */
 
     /* teachers */
@@ -932,12 +949,14 @@ nav {
     #prev {
         font-size: x-large;
     }
+
     /* teachers */
 
     /* footer */
     .footer-icons {
         font-size: 2rem;
     }
+
     /* footer */
 
     /* popup window */
@@ -958,5 +977,6 @@ nav {
         width: 60vw;
         padding: 1% 0;
     }
+
     /* popup window */
 }
