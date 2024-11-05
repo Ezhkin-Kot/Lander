@@ -433,7 +433,7 @@ nav {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: textflow 5s linear infinite;
-    margin-bottom: 4%;
+    margin-bottom: 3%;
 }
 
 @keyframes textflow {
@@ -727,15 +727,15 @@ nav {
 
     /* reviews */
     .conture {
-        font-size: medium;
+        font-size: 45%;
         padding: 4%;
         width: 20rem;
         height: 25rem;
     }
 
     .carousel-caption {
-        margin-top: 4rem;
-        padding: 5%;
+        padding: 15%;
+        margin-bottom: 0%;
     }
 
     /* reviews */
