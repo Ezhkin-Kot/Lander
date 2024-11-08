@@ -1,27 +1,29 @@
 // Функция для отслеживания пересечения блоков с областью видимости
-const sections = document.querySelectorAll('section');
+const animBlocks = document.querySelectorAll('.animated-block');
 
 const observerOptions = {
-    threshold: 0.3 // Процент пересечения элемента с экраном (30%)
+    threshold: 0.5 // Процент пересечения с экраном (50%)
 };
 
-const observerCallback = (entries, observer) => {
+function observerCallback(entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('active');
-        } else {
+        }
+        else {
             entry.target.classList.remove('active');
         }
     });
-};
+}
 
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-sections.forEach(section => observer.observe(section));
+for (let animBlock of animBlocks) {
+    observer.observe(animBlock);
+}
 
 // Анимация карточек преподавателей
 let cards = document.querySelectorAll('.teachers-slider .card');
-let teachersBG = document.querySelectorAll('.teachers-slider .card .teacher-img');
 let levitates = document.querySelectorAll('.teachers-slider .card .teacher-img .levitate-img');
 let active = 0;
 
