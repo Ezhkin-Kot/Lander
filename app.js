@@ -91,7 +91,7 @@ sub.addEventListener('click',function(e){
     let name = document.forms["contact-form"]["name"].value;
     let phone = document.forms["contact-form"]["phone"].value;
     let email = document.forms["contact-form"]["email"].value;
-    if (name === "" || phone === "" || email === "") {
+    if (name === "" || phone === "" || email === "" || !(email.indexOf("@") > -1 && email.indexOf("@") > -1)) {
         invalid_data.classList.add('open')
         setTimeout(
             () => {
