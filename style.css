@@ -643,6 +643,19 @@ nav {
     transform: translate(0%) scale(100%);
 }
 
+.invalid_data {
+    padding-top: 3%;
+    display: none;
+    color: #FF0201;
+    font-size: 1.25rem;
+    transform: translate(0) scale(0);
+}
+
+.invalid_data.open {
+    display: block !important;
+    transform: translate(0%) scale(100%);
+}
+
 /* popup window */
 
 /* adaptation */
@@ -858,6 +871,10 @@ nav {
         font-size: 1rem;
     }
 
+    .invalid_data {
+        font-size: 1rem;
+    }
+
     /* popup window */
 }
 
@@ -940,6 +957,10 @@ nav {
     }
 
     .react {
+        font-size: 1rem;
+    }
+
+    .invalid_data {
         font-size: 1rem;
     }
 

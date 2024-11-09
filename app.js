@@ -72,6 +72,8 @@ const openPopUp = document.querySelectorAll('.open_pop_up');
 const closePopUp = document.getElementById('pop_up_close');
 const popUp = document.getElementById('pop_up');
 const sub = document.getElementById('submit');
+const react = document.getElementById('react');
+const invalid_data = document.getElementById('invalid_data');
 
 
 openPopUp.forEach(link => {
@@ -86,11 +88,24 @@ closePopUp.addEventListener('click',function(){
 
 sub.addEventListener('click',function(e){
     e.preventDefault();
-    react.classList.add('open');
-    setTimeout(
-        () => {
-            popUp.classList.remove('open');
-        },
-        3 * 1000
-    );
+    let name = document.forms["contact-form"]["name"].value;
+    let phone = document.forms["contact-form"]["phone"].value;
+    let email = document.forms["contact-form"]["email"].value;
+    if (name === "" || phone === "" || email === "") {
+        invalid_data.classList.add('open')
+        setTimeout(
+            () => {
+            invalid_data.classList.remove('open');
+            },
+            1000
+        );
+    } else {
+        react.classList.add('open');
+        setTimeout(
+            () => {
+                popUp.classList.remove('open');
+            },
+            3 * 1000
+        );
+    }
 })
